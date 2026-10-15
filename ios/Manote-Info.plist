@@ -16,7 +16,7 @@
 	<key>NSAlarmKitUsageDescription</key>
 	<string>Manote membunyikan alarm saat waktu mulai sebuah tugas tiba.</string>
 	<key>ManoteDeviceAPIBaseURL</key>
-	<string>http://hidarahlab.local:8080</string>
+	<string>https://ibks-mac-mini.tailfd11c4.ts.net:8443</string>
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>Manote menghubungi server Manote di Mac Anda lewat jaringan Wi-Fi yang sama.</string>
 	<key>NSCalendarsFullAccessUsageDescription</key>
