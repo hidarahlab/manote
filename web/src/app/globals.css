@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* Tema "Meja Kerja": satu warna tinta (ungu) dan satu warna kertas per fitur. */
+:root {
+  /* Tema mengikuti perangkat, kecuali pengguna memilih sendiri di Pengaturan (data-theme). */
+  color-scheme: light dark;
+
+  --background: light-dark(#fbfaf8, #121214);
+  --foreground: light-dark(#1c1c1e, #ededed);
+  --muted: light-dark(#6b6b70, #9a9aa0);
+  --surface: light-dark(#f1efe8, #232326);
+  --primary: light-dark(#534ab7, #afa9ec);
+  --on-primary: light-dark(#ffffff, #26215c);
+  --primary-soft: light-dark(#eeedfe, #3c3489);
+  --on-primary-soft: light-dark(#3c3489, #cecbf6);
+  --danger: light-dark(#a32d2d, #f09595);
+
+  --notes-bg: light-dark(#faeeda, #412402);
+  --notes-title: light-dark(#633806, #fac775);
+  --notes-sub: light-dark(#854f0b, #ef9f27);
+  --tasks-bg: light-dark(#e6f1fb, #042c53);
+  --tasks-title: light-dark(#0c447c, #b5d4f4);
+  --tasks-sub: light-dark(#185fa5, #85b7eb);
+  --urgent-bg: light-dark(#fcebeb, #501313);
+  --urgent-title: light-dark(#791f1f, #f7c1c1);
+  --urgent-sub: light-dark(#a32d2d, #f09595);
+  --kanban-bg: light-dark(#e1f5ee, #04342c);
+  --kanban-title: light-dark(#085041, #9fe1cb);
+  --kanban-sub: light-dark(#0f6e56, #5dcaa5);
+
+  /* Kartu lewat tenggat (hitam) dan kartu selesai (hijau): sama di mode terang dan gelap. */
+  --overdue-bg: #000000;
+  --overdue-title: #ffffff;
+  --overdue-sub: #c9c9cf;
+  --done-bg: #0f6e56;
+  --done-title: #ffffff;
+  --done-sub: #c8efe2;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-surface: var(--surface);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-primary-soft: var(--primary-soft);
+  --color-on-primary-soft: var(--on-primary-soft);
+  --color-danger: var(--danger);
+  --color-notes-bg: var(--notes-bg);
+  --color-notes-title: var(--notes-title);
+  --color-notes-sub: var(--notes-sub);
+  --color-tasks-bg: var(--tasks-bg);
+  --color-tasks-title: var(--tasks-title);
+  --color-tasks-sub: var(--tasks-sub);
+  --color-urgent-bg: var(--urgent-bg);
+  --color-urgent-title: var(--urgent-title);
+  --color-urgent-sub: var(--urgent-sub);
+  --color-kanban-bg: var(--kanban-bg);
+  --color-kanban-title: var(--kanban-title);
+  --color-kanban-sub: var(--kanban-sub);
+  --color-overdue-bg: var(--overdue-bg);
+  --color-overdue-title: var(--overdue-title);
+  --color-overdue-sub: var(--overdue-sub);
+  --color-done-bg: var(--done-bg);
+  --color-done-title: var(--done-title);
+  --color-done-sub: var(--done-sub);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
